@@ -29,6 +29,10 @@ func (dict *Dictionary) TotalFrequency() int64 {
 	return dict.totalFrequency
 }
 
+func (dict *Dictionary) GetTokens() []Token {
+	return dict.tokens
+}
+
 // 向词典中加入一个分词
 func (dict *Dictionary) addToken(token Token) {
 	bytes := textSliceToBytes(token.text)
